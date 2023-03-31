@@ -1,0 +1,13 @@
+shop: # isso precisa corresponder ao perfil em seu arquivo dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: C:\Users\GabrielPC\Downloads\atividade03-credential.json
+      project: atividade03-290323
+      dataset: dbt_shop
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
